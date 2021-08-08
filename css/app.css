@@ -1,0 +1,638 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+
+:root {
+  --mainPink: #ef7998;
+  --mainBlue: #5a4ff3;
+  --mainYellow: rgb(249, 247, 148);
+  --mainHover: #ffc30f;
+  --mainWhite: #fff;
+  --mainBlack: #000;
+  --bannertitle: rgba(35, 7, 77, 0.6);
+  --blueTrans: rgba(95, 93, 243, 0.5);
+  --yellowTrans: rgba(249, 228, 148, 0.5);
+  --mainGrey: rgb(238, 238, 238);
+}
+@font-face {
+    font-family: 'Yekan';
+    src: url('../fonts/Yekan.ttf') format('eot'),
+         url('../fonts/Yekan.ttf') format('woff'),
+         url('../Yekan-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/Vazir.eot');
+    src: url('../fonts/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir.woff2') format('woff2'),
+         url('../fonts/Vazir.woff') format('woff'),
+         url('../fonts/Vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/Vazir-Bold.eot');
+    src: url('../fonts/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir-Bold.woff2') format('woff2'),
+         url('../fonts/Vazir-Bold.woff') format('woff'),
+         url('../fonts/Vazir-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/Vazir-Black.eot');
+    src: url('../fonts/Vazir-Black.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir-Black.woff2') format('woff2'),
+         url('../fonts/Vazir-Black.woff') format('woff'),
+         url('../fonts/Vazir-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/Vazir-Medium.eot');
+    src: url('../fonts/Vazir-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir-Medium.woff2') format('woff2'),
+         url('../fonts/Vazir-Medium.woff') format('woff'),
+         url('../fonts/Vazir-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/Vazir-Light.eot');
+    src: url('../fonts/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir-Light.woff2') format('woff2'),
+         url('../fonts/Vazir-Light.woff') format('woff'),
+         url('../fonts/Vazir-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir;
+    src: url('../fonts/Vazir-Thin.eot');
+    src: url('../fonts/Vazir-Thin.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir-Thin.woff2') format('woff2'),
+         url('../fonts/Vazir-Thin.woff') format('woff'),
+         url('../fonts/Vazir-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+	outline: none;
+}
+i{
+    vertical-align: middle;
+}
+a:hover, a:focus {
+    -webkit-transition: all 300ms ease 0s;
+    transition: all 300ms ease 0s;
+    text-decoration: none;
+    outline: 0 solid transparent;
+}
+button {
+    outline: none!important;
+    border: none;
+    background: 0 0;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.opacity{
+    opacity: 0;
+}
+.border{
+    position: absolute;
+    width: 120px;
+    height: 4px;
+    background-color: #311b92;
+   top: 50px;
+    bottom: 0;
+    right: 0;
+}
+body {
+    font-family: 'Vazir',Vazir,'Yekan' , Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    color: var(--mainBlack);
+    background-color: var(--mainWhite);
+    line-height: 24px;
+    font-weight: 400;
+}
+
+html,
+body,
+header,
+#intro-section {
+    height: 100%;
+}
+#intro-section2 {
+    height: 600px;
+}
+.header{
+    position: relative;
+}
+.header .container{
+    position: relative;
+    padding-right: -50px;
+}
+.header .container:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -220px;
+    width: 330px;
+    height: 72px;
+    background: #fff;
+    z-index: -2;
+}
+.header{
+    background: linear-gradient( rgba(19, 18, 19, 0.6),rgba(17, 20, 20, 0.6),rgba(27, 25, 27, 0.6)), url('../img/young-woman-black-t-shirt-with-camera.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+@media (max-width: 740px) {
+    html,
+    body,
+    header,
+    #intro-section {
+        min-height: 100vh;
+    }
+}
+@media (max-width: 991px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #100f11 !important;
+    }
+}
+.header .navbar-brand{
+    animation: fadeInRight 0.7s linear forwards;
+    opacity: 0;
+    animation-delay: 3s;
+}
+.header nav li {
+    margin-right: 30px;
+    animation: fadeInRight 0.7s linear forwards;
+    opacity: 0;
+}
+.header nav li:nth-child(1){
+    animation-delay: 3.25s;
+}
+.header nav li:nth-child(2){
+    animation-delay: 3.5s;
+}
+.header nav li:nth-child(3){
+    animation-delay: 3.75s;
+}
+.header nav li:nth-child(4){
+    animation-delay: 4s;
+}
+.header nav li:nth-child(5){
+    animation-delay: 4.25s;
+}
+.header .nav-flex-icons li{
+    animation: fadeInRight 0.7s linear forwards;
+    opacity: 0;
+}
+.header .nav-flex-icons li:nth-child(1){
+    animation-delay: 4.5s;
+}
+.header .nav-flex-icons li:nth-child(2){
+    animation-delay: 4.75s;
+}
+.header .nav-flex-icons li:nth-child(3){
+    animation-delay: 5s;
+}
+@keyframes fadeInRight{
+   0%
+   {
+       transform: translateY(150px);
+       opacity: 0;
+   } 
+   100%{
+       transform: translateY(0);
+       opacity: 1;
+   }
+}
+.header nav li a{
+    position: relative;
+    font-size: 1rem;
+    color: #fff;
+    padding: 4px 10px;
+    font-weight: bold;
+}
+.header nav li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: #ffc30f;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+
+.top-nav-collapse, .page-footer {
+    background-color: #049db1 !important;
+}
+.header nav li a:hover{
+    color: #fff !important;
+}
+.header .smooth-scroll li a:hover:before,
+.header .smooth-scroll li a.active:before{
+    width: 50px;
+}
+.header .nav-flex-icons li .iconbtn{
+    position: relative;
+    border-radius: 50%;
+    font-size: 1.2rem !important;
+    padding: 13px;
+}
+.header .nav-flex-icons li .iconbtn::before{
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.header .nav-flex-icons li .iconbtn::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 50%;
+    z-index: 0;
+    border: 3px dashed;
+}
+.header .nav-flex-icons li .iconbtn:hover::after{
+    animation: ro 4s linear infinite;
+}
+@keyframes ro{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.header .navbar-brand img{
+    width: 70px;
+    height: 60px;
+}
+.header .element1{
+    opacity: 0;
+    float: left;
+    margin-left: 30px;
+    width: 200px;
+    height: 200px;
+    border: 20px solid #fff;
+    animation: rotate 40s linear infinite, fadeIn 1s linear forwards;
+    animation-delay: 6s;
+}
+.element2{
+    opacity: 0;
+    margin-top: 100px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(248, 247, 250);
+    animation: rotate 30s linear infinite, fadeIn 1s linear forwards;
+    animation-delay: 6s;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(405deg);
+    }
+}
+@media (max-width: 991px) {
+    .portfolio_area {
+      padding-bottom: 50px;
+}
+    .header nav li{
+       margin-top: 20px; 
+    }
+
+}
+/**** view ****/
+.header .view .banner{
+    margin-top: 130px;
+}
+.view .banner-text {
+    margin-right: 40px;
+    
+}
+.view .banner-text h1{
+    color: #fff;
+    font-size: 1.6rem;
+    position: relative;
+    display: inline-block;
+    transform-origin: right;
+    transform: scaleX(0);
+    animation: revealTextReverse 1s ease-in-out forwards;
+    animation-delay: 2s;
+}
+.view .banner-text h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    animation: revealText 1s ease-in-out forwards;
+    animation-delay: 3s;
+}
+.view .banner-text h2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    animation: revealText 1s ease-in-out forwards;
+    animation-delay: 4s;
+}
+@keyframes revealText{
+    0%{
+        transform: scaleX(1);
+    }
+    100%{
+        transform: scaleX(0);
+    }
+}
+@keyframes revealTextReverse{
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+.view .banner-text h1 span{
+    line-height: 65px;
+}
+.view .banner-text h1 .text-b{
+    margin-right: 80px;
+}
+.view .banner-text h1 .text-c{
+    margin-right: 300px;
+    font-size: 2.6rem;
+    color: #f37121 ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.view .banner-text h2{
+    margin-right: 100px;
+    background: #049db1;
+    display: inline-block;
+    padding: 15px 15px 15px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-family: 'https://creativecommons.org/licenses/by-nd/4.0/deed.en';
+    color: #fff;
+    transform-origin: right;
+    transform: scaleX(0);
+    animation: revealTextReverse 1s ease-in-out forwards;
+    animation-delay: 3s;
+}
+/**** portfolio_area ***/
+@media (max-width: 991px) {
+    .portfolio_area {
+      padding-bottom: 50px;
+}
+    .header nav li{
+        animation: none;
+        opacity: 1;
+    }
+
+}
+.portfolio_area .filters ul {
+    padding-left: 0;
+    margin-bottom: 30px; 
+}
+.area-heading h2{
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+@media (max-width: 991px) {
+    .portfolio_area .filters ul {
+        margin-bottom: 20px; 
+} }
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%; }
+    .gallery .pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease; }
+    .gallery .animation {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+    
+    @media (max-width: 450px) {
+    .gallery {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%;
+    }
+    }
+.gallery .v3{
+    height: 242px;
+}
+.gallery a img{
+    width: 100%;
+}
+.gallery .b a img{
+    min-height: 541px;
+}
+    
+@media (max-width: 400px) {
+    .btn.filter {
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+    }
+}
+.portfolio_area .btn{
+    transition: color 0.4s linear;
+}
+.portfolio_area .btn:hover{
+    color: #fff !important;
+}
+.portfolio_area .btn::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #049db1;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0 ;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+.portfolio_area .btn::before{
+    transform: scaleY(0);
+}
+.portfolio_area .btn:hover::before{
+    transform: scaleY(1);
+}
+.portfolio_area .hover15 a{
+    position: relative;
+}
+.portfolio_area .hover15 a::before{
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 0;
+	height: 0;
+	background: rgba(255,255,255,.3);
+	border-radius: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+.portfolio_area .hover15 a:hover::before {
+	-webkit-animation: circle .75s;
+	animation: circle .75s;
+}
+@keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 120%;
+		height: 280px;
+		opacity: 0;
+	}
+}
+
+/****** best *****/
+.best{
+    background: #212534;
+}
+.best-header h2{
+    font-size: 1.7em;
+    padding: 15px;
+    background: #ffc30f;
+    display: inline-block;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-weight: bold;
+}
+.best .best-text p{
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 30px;
+    color: #fff;
+}
+.best .video-image{
+    position: relative;
+}
+.best .video-image img{
+    border-radius: 20px;
+}
+.best .video-image::before{
+    background: rgba(37,41,51,0.4);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+/**** article ****/
+.article .card img{
+    width: 100%;
+    height: 250px;
+}
+.article .card-body h4{
+    font-size: 1.1rem;
+    height: 70px;
+    line-height: 28px;
+}
+.article .card-body h6{
+    font-family: cursive;
+    padding: 15px;
+    background: #ffc30f;
+    display: inline-block;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.article .card-body p{
+    color: #333 !important;
+}
+.article-btn .btn{
+    transition: color 0.4s linear;
+}
+.article-btn .btn:hover{
+    color: #fff !important;
+    background: #2bbbad !important;
+}
+.article-btn .btn:hover::before{
+    transform: scaleY(1);
+}
+/**** single-article ****/
+.single-article .single-img img{
+    width: 100%;
+    height: 350px;
+}
+.single-article .single-text h2{
+    font-size: 1.8em;
+}
+.single-article .single-text p{
+    font-size: 1em;
+    text-align: justify;
+}
+.btn-fb {
+    color: #fff;
+    background-color: #3b5998!important;
+}
+.btn-tw {
+    color: #fff;
+    background-color: #55acee!important;
+}
+.btn-in{
+    color: #fff;
+    background-color: #f145cc!important; 
+}
+/**** footer ***/
+.footer{
+    background: #049db1;
+}
+.footer p{
+    color: #fff;
+}
+.footer p span{
+    color: #ffc30f;
+    font-weight: bold;
+}
+  
